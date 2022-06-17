@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+src/Otto.py
+src/__init__.py
+src/Otto.egg-info/PKG-INFO
+src/Otto.egg-info/SOURCES.txt
+src/Otto.egg-info/dependency_links.txt
+src/Otto.egg-info/top_level.txt

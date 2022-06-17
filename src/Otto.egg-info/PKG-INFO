@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: Otto
+Version: 1.0.0
+Summary: Optimal Translation Trainer Operative
+Author: Boris Terzic
+Classifier: License :: Free for non-commercial use
+Classifier: Natural Language :: English
+Classifier: Natural Language :: French
+Classifier: Natural Language :: German
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Education :: Testing
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# Otto
+
+## Optimal Translation Trainer Operative
+
+Otto is a program that uses my personal French/German Excel lexicon to train the user on learning vocabulary.
+
+I was inspired by the Anki app in which we create decks of cards with a face to read and the other to guess. The principle is to self-evaluate the difficulty to guess the corresponding information by adding a rate for each one after seeing the result. Here we add a weight to the word in order to adjust its probability to appear in the training session.
+
+**Warnings**:
+
+- I started this lexicon when I took my first German lesson and it is still ongoing. Thus it may have some errors for which I apologize.
+
+- This program is conceived to work on my specific Excel file's layout. However new words can be added !
+
+**PS:** The program is still under development. I intend to make it more efficient, cleaner and add an english column.
