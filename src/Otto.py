@@ -317,5 +317,5 @@ def quizz(language="Fra"):
     # Print the session summary
     summary(session)
 
-
-quizz()
+if __name__ == "__main__":
+    quizz()
