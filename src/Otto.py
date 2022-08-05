@@ -125,7 +125,6 @@ def user_profile():
     file_name = user_name + ".xlsx"
     return file_name
 
-
 def language_selection():
     """Allows the user to select the training language.
 
@@ -233,9 +232,13 @@ def words_to_guess(n_words, sheet, mode):
 
     # Check if there is no duplicates or replace them
     diff = len(r) - len(set(r))
-    if diff != 0:
-        r.drop_duplicates(inplace=True)
-        r.append(random.choices(word_rows, r_list["Weight"], k=diff))
+    while diff != 0:
+        r = list(set(r)) #r.drop_duplicates(inplace=True)
+        i=0
+        while i < diff:
+            r.append(random.choices(word_rows, r_list["Weight"], k=1)[0])
+            i+=1
+        diff = len(r) - len(set(r))
     return r, r_list, mode
 
 
@@ -317,5 +320,5 @@ def quizz(language="Fra"):
     # Print the session summary
     summary(session)
 
-
-quizz()
+if __name__ == "__main__":
+    quizz()
