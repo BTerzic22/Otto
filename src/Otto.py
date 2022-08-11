@@ -10,7 +10,7 @@ def categories(path):
 
     Returns the categorized tab"""
     lexicon = pd.read_excel(path)
-    cat = ['adj', 'verb', 'adv', 'gen', 'vrac']
+    cat = ['adj', 'verb', 'adv', 'gen']
     it = iter(cat)
     for i in range(lexicon.shape[1]):
         if lexicon.iloc[:, i].isna().sum()/lexicon.shape[0] == 1:
@@ -269,7 +269,7 @@ def guesser(n_words, r, r_list, lang_to_guess, lang_solution):
     solution_col = lang_col[lang_solution]
     while n < n_words:
         word = r_list.iloc[r[n], guess_col]
-        print('\n{} : '.format(word))
+        print('\n#{}/{}: {} : '.format(n+1, n_words, word))
         guess = str(input())
         print("Your answer: {}. Solution: {}.\nHow hard was it ? (0: Sehr einfach, 1: Not perfect, \
 2: Quite hard to find, 3: Really missed it)".format(guess, r_list.iloc[r[n], solution_col]))
@@ -295,7 +295,7 @@ def summary(session):
             key, session[key][0], session[key][1]))
 
 
-def quizz(language="Fra"):
+def quizz():
     # Select the user tab
     file_name = user_profile()
     sheet = pd.read_excel(file_name)
